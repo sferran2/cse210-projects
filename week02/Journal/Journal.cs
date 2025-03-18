@@ -3,18 +3,69 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.CompilerServices;
 
+// Shows creativity and exceeds core requirements
+
+// Writing Feels Like a Chore:
+// Implementing a way to track how many days a user writes and celebrating milestones at 5 and 10 days. 
+// When the user reaches 20 days, acknowledge that journaling has become a habit.
 
 public class Journal
 {
     public List<Entry> _userEntries;
+    public int streakCount;
+    public string lastEntryDate;
+
     public Journal()
     {
         _userEntries = new List<Entry>();
+        streakCount = 0;
+        lastEntryDate = "";
     }
 
     public void AddEntry (Entry newEntry)
     {
         _userEntries.Add(newEntry);
+        TrackStreak();
+    }
+
+    public void TrackStreak()
+    {
+        string todayDate = DateTime.Now.ToString("yyyy-MM-dd");
+        
+        if (lastEntryDate == todayDate)
+        {
+            Console.WriteLine("You already wrote today! Keep up the habit!");
+            return;
+        }
+        
+        if (lastEntryDate == "" || DateTime.Parse(lastEntryDate).AddDays(1).ToString("yyyy-MM-dd") == todayDate)
+        {
+            streakCount++;
+        }
+        else
+        {
+            streakCount = 1; 
+        }
+
+        lastEntryDate = todayDate;
+        DisplayStreak();
+    }
+
+    private void DisplayStreak()
+    {
+        Console.WriteLine($"Streak: {streakCount} days!");
+        if (streakCount == 5)
+        {
+            Console.WriteLine("5-Day Streak! Keep going!");
+        }
+        else if (streakCount == 10)
+        {
+            Console.WriteLine("10-Day Streak! Amazing dedication!");
+        }
+        else if (streakCount == 20)
+        {
+            Console.WriteLine("Congratulations! You've reached 20 entries—it's now a habit! Keep the momentum going!");
+        }
     }
 
     public void DisplayALL()
