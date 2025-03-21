@@ -1,3 +1,7 @@
+//Exceeding Requirements
+// Work with a library of scriptures and choose scriptures at random to present to the user.
+
+
 using System;
 using System.Collections.Generic;
 
@@ -26,9 +30,6 @@ class Program
             new Scripture(new Reference("Moroni", 10, 4, 5), 
                 "And when ye shall receive these things, I would exhort you that ye would ask God, the Eternal Father, in the name of Christ, if these things are not true; and if ye shall ask with a sincere heart, with real intent, having faith in Christ, he will manifest the truth of it unto you, by the power of the Holy Ghost. And by the power of the Holy Ghost ye may know the truth of all things.")
         };
-
-        //Exceeding Requirements
-        // Work with a library of scriptures and choose scriptures at random to present to the user.
 
         Random random = new Random();
         int randomIndex = random.Next(scriptures.Count); 
