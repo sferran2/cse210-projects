@@ -28,7 +28,7 @@ class Program
         };
 
         //Exceeding Requirements
-        // Work with a library of scriptures. Choose scriptures at random to present to the user.
+        // Work with a library of scriptures and choose scriptures at random to present to the user.
 
         Random random = new Random();
         int randomIndex = random.Next(scriptures.Count); 
