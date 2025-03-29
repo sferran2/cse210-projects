@@ -39,6 +39,7 @@ class Program
 
         foreach (Order order in orders)
         {
+            Console.WriteLine(new string('-', 50));
             Console.WriteLine(order.GetPackingLabel());
             Console.WriteLine(order.GetShippingLabel());
             Console.WriteLine($"Total Price: ${order.GetTotalPrice():0.00}");
