@@ -1,3 +1,5 @@
+//Showing Creativity and Exceeding Requirements: Add the option for the user to set their own prize.
+
 using System;
 
 public class Prize

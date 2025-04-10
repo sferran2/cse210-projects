@@ -15,7 +15,7 @@ public class GoalManager
         _goals = new List<Goal>();
         _score = 0;
     }
-
+    // Add a welcome message and a program explanation
     public void DisplayWelcome()
     {
         Console.WriteLine();

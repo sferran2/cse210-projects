@@ -26,7 +26,7 @@ public class ChecklistGoal : Goal
         _shortName = shortName;
         _description = description;
         _points = points;
-        _amountComplete = amountComplete; // allow loading with current progress
+        _amountComplete = amountComplete;
         _target = target;
         _bonus = bonus;
     }
@@ -40,7 +40,7 @@ public class ChecklistGoal : Goal
 
             if (IsComplete())
             {
-                Console.WriteLine($"🎉 Bonus! You've completed the checklist and earned {_bonus} bonus points!");
+                Console.WriteLine($" Bonus! You've completed the checklist and earned {_bonus} bonus points!");
             }
             Console.WriteLine($"{_shortName} — Currently completed: {_amountComplete}/{_target}");
         }
