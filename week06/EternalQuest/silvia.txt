@@ -1,0 +1,5 @@
+0
+Prize|Hoka Shoes|1000
+SimpleGoal|Jesus el cristo|read the book|100|False
+EternalGoal|Pray|pray at morning and at night|20
+ChecklistGoal|Come follow me|Come follow me read it every nigh for a week (Completed: 0/7)|50|0|7|100
